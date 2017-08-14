@@ -14,7 +14,7 @@ repositories {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '25.0.3'
     defaultConfig {
         applicationId "com.rahulrv.tweetz"
         minSdkVersion 21
@@ -22,7 +22,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        jackOptions {
+            enabled true
+        }
         buildConfigField 'String', 'END_POINT', '"https://api.twitter.com/1.1/"'
         buildConfigField 'String', 'AUTH_END_POINT', '"https://api.twitter.com/oauth2/token"'
         buildConfigField 'String', 'CONSUMER_KEY', '"xhBLIT2ZAdutz4aI9rwIjVEuy"'
